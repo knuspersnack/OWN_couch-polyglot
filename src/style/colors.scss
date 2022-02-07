@@ -1,0 +1,10 @@
+
+$amber-orange: #FFBF00;
+$carrot-orange: #EF7215;
+$burnt-orange: #964000;
+$gray: #777;
+
+//TODO 
+@mixin bg-gradient($imageUrl){
+    background-image: linear-gradient(to right bottom, rgba(255, 191, 0, 0.8), rgba(150, 64, 0, 0.8)), url($imageUrl);
+}
