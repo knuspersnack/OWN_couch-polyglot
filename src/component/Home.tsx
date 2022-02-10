@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { MouseEventHandler } from 'react';
 import style from './Home.module.scss';
 import logo from '../assets/natours/logo-white.png';
 import AnimatedButton from './UI/AnimatedButton';
 
 const Home = () => {
+
+  
+function openInNewTab(event:any){
+  event.preventDefault();
+  window.open('https://www.youtube.com/channel/UCHowOK8RrPns_-m1LPfoqEw', '_blank');
+}
+
   return (
     <>
       {/* 
@@ -15,6 +22,7 @@ const Home = () => {
           Couch Polyglot
         </a>
       </div> */}
+
       <div className={style.natours}>
         <div className={style.header}>
           <div className={style.logoBox}>
@@ -28,7 +36,8 @@ const Home = () => {
                 is where life happens
               </span>
             </h1>
-            <AnimatedButton label={'Test'} onClick={()=>{console.log("Cklciked")}}/>
+            <AnimatedButton label={'Discover my content'} 
+            onClick={openInNewTab}/>
           </div>
         </div>
       </div>
