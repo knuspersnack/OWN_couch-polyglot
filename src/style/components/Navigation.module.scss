@@ -1,0 +1,29 @@
+@use '../base/colors.scss' as *;
+
+.navigationContainer {
+    width: 100%;
+    background-color: $burnt-orange;
+    margin-bottom: 10px;
+    padding: 10px 0;
+}
+
+.horizontal {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.navPoint {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 5px;
+    color: $white;
+
+    &:hover {
+        background-color: $white;
+        color: $gray
+    }
+
+}

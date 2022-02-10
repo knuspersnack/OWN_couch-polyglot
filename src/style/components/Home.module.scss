@@ -1,4 +1,4 @@
-@use '../style/colors.scss' as *;
+@use '../base/colors.scss' as *;
 
 .home {
     background-color: $amber-orange;
@@ -8,8 +8,7 @@
     color: $gray;
 
     .header {
-        @include bg-gradient('../assets/natours/hero.jpg');
-        width: 95vw;
+        @include bg-gradient('../../assets/natours/hero.jpg');
         height: 95vh;
         background-size: cover;
         background-position: top;

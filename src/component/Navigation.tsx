@@ -1,18 +1,28 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import customStyle from "./Navigation.module.scss"
+import style from "../style/components/Navigation.module.scss"
 
 const Navigation = () => {
   return (
-    <nav className="navigation">
-      <ul>
+    <nav className={style.navigationContainer}>
+      <ul className={style.horizontal}>
         <li>
-          <NavLink exact activeClassName="current" to="/">
-            Home
+          <NavLink exact activeClassName="current" to="/" className={style.navPoint}>
+            Me
           </NavLink>{" "}
         </li>
         <li>
-          <NavLink exact activeClassName="current" to="/impressum">
+          <NavLink exact activeClassName="current" to="/impressum" className={style.navPoint}>
+            Learn with me
+          </NavLink>
+        </li>
+        <li>
+          <NavLink exact activeClassName="current" to="/impressum" className={style.navPoint}>
+            My content
+          </NavLink>
+        </li>
+        <li>
+          <NavLink exact activeClassName="current" to="/impressum" className={style.navPoint}>
             Impressum
           </NavLink>
         </li>

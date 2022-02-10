@@ -1,6 +1,6 @@
-import React, { MouseEventHandler } from 'react';
-import style from './Home.module.scss';
+import React from 'react';
 import logo from '../assets/natours/logo-white.png';
+import style from '../style/components/Home.module.scss';
 import AnimatedButton from './UI/AnimatedButton';
 
 const Home = () => {

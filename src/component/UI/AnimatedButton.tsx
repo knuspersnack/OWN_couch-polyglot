@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import React, { MouseEventHandler } from 'react';
-import style from './AnimatedButton.module.scss';
+import style from '../../style/components/AnimatedButton.module.scss';
 var cx = classNames.bind(style);
 
 type Props = { label: String; onClick: MouseEventHandler; color?: String };

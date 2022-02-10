@@ -6,7 +6,8 @@ $gray: #777;
 $white: #fff;
 $black: #000;
 
-//TODO 
+
 @mixin bg-gradient($imageUrl){
-    background-image: linear-gradient(to right bottom, rgba(255, 191, 0, 0.8), rgba(150, 64, 0, 0.8)), url($imageUrl);
+    background-image: linear-gradient(to right bottom, rgba($amber-orange, 0.8), rgba($burnt-orange, 0.8)), 
+        url($imageUrl);
 }
