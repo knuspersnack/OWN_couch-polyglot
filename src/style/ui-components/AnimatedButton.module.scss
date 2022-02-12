@@ -1,4 +1,4 @@
-@use '../base/colors.scss' as *;
+@import '../base/variables';
 
 .btn {
   &:link,
@@ -19,9 +19,9 @@
     box-shadow: 0 5px 10px rgba($black,.2);
   }
 
-}
+  &White {
+    background-color: $white;
+    color: $gray
+  }
 
-.btnWhite {
-  background-color: $white;
-  color: $gray
 }

@@ -1,8 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import style from "../style/components/Navigation.module.scss"
+import style from "../style/layout/Navbar.module.scss"
 
-const Navigation = () => {
+const Navbar = () => {
   return (
     <nav className={style.navigationContainer}>
       <ul className={style.horizontal}>
@@ -13,12 +13,17 @@ const Navigation = () => {
         </li>
         <li>
           <NavLink exact activeClassName="current" to="/impressum" className={style.navPoint}>
-            Learn with me
+            Learn
           </NavLink>
         </li>
         <li>
           <NavLink exact activeClassName="current" to="/impressum" className={style.navPoint}>
-            My content
+            Discover
+          </NavLink>
+        </li>
+        <li>
+          <NavLink exact activeClassName="current" to="/impressum" className={style.navPoint}>
+            Follow
           </NavLink>
         </li>
         <li>
@@ -31,4 +36,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default Navbar;
