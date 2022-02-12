@@ -1,15 +1,17 @@
 import React from 'react';
 import logo from '../assets/natours/logo-white.png';
 import style from '../style/pages/Home.module.scss';
-import AnimatedButton from './UI/AnimatedButton';
+import PrimaryButton from './UI/PrimaryButton';
+import SecondaryHeading from './UI/SecondaryHeading';
 
 const Home = () => {
-
-  
-function openInNewTab(event:any){
-  event.preventDefault();
-  window.open('https://www.youtube.com/channel/UCHowOK8RrPns_-m1LPfoqEw', '_blank');
-}
+  function openInNewTab(event: any) {
+    event.preventDefault();
+    window.open(
+      'https://www.youtube.com/channel/UCHowOK8RrPns_-m1LPfoqEw',
+      '_blank'
+    );
+  }
 
   return (
     <>
@@ -24,7 +26,7 @@ function openInNewTab(event:any){
       </div> */}
 
       <div className={style.natours}>
-        <div className={style.header}>
+        <section className={style.sectionIntro}>
           <div className={style.logoBox}>
             <img src={logo} alt='Logo' className={style.logo} />
           </div>
@@ -36,10 +38,16 @@ function openInNewTab(event:any){
                 is where life happens
               </span>
             </h1>
-            <AnimatedButton label={'Discover my content'} 
-            onClick={openInNewTab}/>
+            <PrimaryButton
+              label={'Discover my content'}
+              onClick={openInNewTab}
+            />
           </div>
-        </div>
+        </section>
+
+        <section className={style.sectionAbout}>
+          <SecondaryHeading text='Exciting courses for adventurous people' />
+        </section>
       </div>
     </>
   );

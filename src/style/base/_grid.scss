@@ -17,35 +17,40 @@ $gutter-horizontal: 6rem;
   max-width: $grid-width;
   column-gap: $gutter-horizontal;
 
-  border: 1px solid $gray;
+  border: 1px solid $grey-dark-1;
 }
 
 .col {
   flex-grow: 1;
-  border: 1px dashed $gray;
+  border: 1px dashed $grey-dark-1;
 
   &25 {
     flex-basis: 25%;
-    border: 1px dashed $gray;
+    border: 1px dashed $grey-dark-1
+;
   }
 
   &50 {
     flex-basis: 50%;
-    border: 1px dashed $gray;
+    border: 1px dashed $grey-dark-1
+;
   }
 
   &75 {
     flex-basis: 75%;
-    border: 1px dashed $gray;
+    border: 1px dashed $grey-dark-1
+;
   }
 
   &33 {
     flex-basis: calc(100% / 3);
-    border: 1px dashed $gray;
+    border: 1px dashed $grey-dark-1
+;
   }
 
   &66 {
     flex-basis: calc((100% / 3) * 2);
-    border: 1px dashed $gray;
+    border: 1px dashed $grey-dark-1
+;
   }
 }
