@@ -17,7 +17,7 @@ const Navbar = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink exact activeClassName="current" to="/impressum" className={style.navPoint}>
+          <NavLink exact activeClassName="current" to="/grid" className={style.navPoint}>
             Discover
           </NavLink>
         </li>

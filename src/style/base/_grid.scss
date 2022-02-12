@@ -1,0 +1,51 @@
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-horizontal: 6rem;
+
+.gridContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: $gutter-vertical;
+  align-items: center;
+
+  background-color: $amber-orange;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  max-width: $grid-width;
+  column-gap: $gutter-horizontal;
+
+  border: 1px solid $gray;
+}
+
+.col {
+  flex-grow: 1;
+  border: 1px dashed $gray;
+
+  &25 {
+    flex-basis: 25%;
+    border: 1px dashed $gray;
+  }
+
+  &50 {
+    flex-basis: 50%;
+    border: 1px dashed $gray;
+  }
+
+  &75 {
+    flex-basis: 75%;
+    border: 1px dashed $gray;
+  }
+
+  &33 {
+    flex-basis: calc(100% / 3);
+    border: 1px dashed $gray;
+  }
+
+  &66 {
+    flex-basis: calc((100% / 3) * 2);
+    border: 1px dashed $gray;
+  }
+}
