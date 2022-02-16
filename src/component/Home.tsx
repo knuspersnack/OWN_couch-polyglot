@@ -1,7 +1,9 @@
 import React from 'react';
 import logo from '../assets/natours/logo-white.png';
 import style from '../style/pages/Home.module.scss';
+import ImageComposition from './ImageComposition';
 import PrimaryButton from './UI/PrimaryButton';
+import SecondaryButton from './UI/SecondaryButton';
 import SecondaryHeading from './UI/SecondaryHeading';
 
 const Home = () => {
@@ -46,7 +48,37 @@ const Home = () => {
         </section>
 
         <section className={style.sectionAbout}>
-          <SecondaryHeading text='Exciting courses for adventurous people' />
+          <SecondaryHeading
+            text='Exciting courses for adventurous people'
+            cssClasses={'u-center-text u-margin-bottom-large'}
+          />
+          <div className='grid-container'>
+            <div className={'row'}>
+              <div className={'col50'}>
+                <h3 className='heading-tertiary u-margin-bottom-small'>
+                  You're going to fall in love with languages
+                </h3>
+                <p className='paragraph'>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+                  reprehenderit obcaecati repellendus quo quas excepturi hic
+                  facere praesentium asperiores exercitationem debitis totam,
+                  provident vitae nihil necessitatibus quis nostrum temporibus?
+                  Aspernatur.
+                </p>
+                <h3 className='heading-tertiary u-margin-bottom-small'>
+                  Live adventures like you never habe before
+                </h3>
+                <p className='paragraph'>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officiis praesentium labore ipsam atque vero.
+                </p>
+                <SecondaryButton label={'Learn more >>'} onClick={() => {}} />
+              </div>
+              <div className={'col50'}>
+                <ImageComposition />
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </>

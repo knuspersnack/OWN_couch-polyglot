@@ -1,12 +1,17 @@
-import React from 'react'
+import React from 'react';
 import style from '../../style/ui-components/SecondaryHeading.module.scss';
 
-type Props = {text: string}
+type Props = { 
+  text: string
+  cssClasses?: string 
+};
 
-function SecondaryHeading({text}: Props) {
+function SecondaryHeading({ text, cssClasses = "" }: Props) {
   return (
-    <h2 className={style.headingSecondary}>{text}</h2>
-  )
+    <div className={cssClasses}>
+      <h2 className={style.headingSecondary}>{text}</h2>
+    </div>
+  );
 }
 
-export default SecondaryHeading
+export default SecondaryHeading;

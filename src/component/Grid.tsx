@@ -3,7 +3,7 @@ import React from 'react';
 
 const Grid = () => {
   return <>
-    <section className={'gridContainer'}>
+    <section className={'grid-container'}>
         <div className={'row'}>
             <div className={'col50'}>
                 Col 1 of 2
