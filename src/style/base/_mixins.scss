@@ -1,4 +1,19 @@
-@mixin bg-gradient($imageUrl){
-    background-image: linear-gradient(to right bottom, rgba($amber-orange, 0.8), rgba($burnt-orange, 0.8)), 
-        url($imageUrl);
+@mixin bg-gradient($imageUrl) {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($amber-orange, 0.8),
+      rgba($burnt-orange, 0.8)
+    ),
+    url($imageUrl);
+}
+
+@mixin text-gradient() {
+  display: inline-block;
+  background-image: linear-gradient(
+    to right,
+    rgba($carrot-orange, 0.8),
+    rgba($burnt-orange, 0.8)
+  );
+  background-clip: text;
+  color: transparent;
 }

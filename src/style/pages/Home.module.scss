@@ -73,5 +73,19 @@
     }
   }
 
+  .sectionFeatures {
+    padding: 20rem 0;
+    @include bg-gradient('../../assets/natours/nat-4.jpg');
+    background-image: cover;
+
+    transform: skewY(-7deg);
+    margin-top: -10rem;
+
+    //only direct childs (row in this case)
+    & > * {
+      transform: skewY(7deg);
+    }
+  }
+
 
 }
