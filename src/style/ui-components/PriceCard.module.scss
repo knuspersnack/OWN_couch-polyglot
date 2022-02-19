@@ -1,0 +1,36 @@
+@import '../base/variables';
+@import '../base/mixins';
+@import '../base/animations';
+
+.priceCard {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+
+  &:hover {
+    .side.front {
+        transform: rotateY(180deg);
+      }
+
+    .side.back {
+      transform: rotateY(0deg);
+    }
+  }
+}
+
+
+.side {
+  background-color: orangered;
+  color: $white;
+  font-size: 2rem;
+  height: 50rem;
+  transition: all 0.8s;
+}
+
+.front {
+  background-color: orangered;
+}
+
+.back {
+  background-color: green;
+  transform: rotateY(180deg); //It is already rotated, since at the back
+}
