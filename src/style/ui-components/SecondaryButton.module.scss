@@ -3,17 +3,17 @@
 .btn {
   &:link,
   &:visited {
-    color: $carrot-orange;
+    color: $orange-tertiary;
     display: inline-block;
     text-decoration: none;
-    border-bottom: 1px solid $carrot-orange;
+    border-bottom: 1px solid $orange-tertiary;
     padding: 3px;
     font-size: $default-font-size;
     transition: all 0.2s;
   }
 
   &:hover {
-    background-color: $carrot-orange;
+    background-color: $orange-tertiary;
     color: $white;
     box-shadow: 0 1rem 2rem rgba($black, 0.15);
     transform: translateY(-2px);
@@ -25,6 +25,6 @@
 
   &White {
     background-color: $white;
-    color: $grey-dark-1;
+    color: $grey-main;
   }
 }

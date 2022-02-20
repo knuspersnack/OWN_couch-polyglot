@@ -2,21 +2,21 @@
 @import '../base/mixins';
 
 .featureBox {
-    background-color: rgba($white, .8);
-    font-size: 1.5rem;
-    padding: 2.5rem;
-    text-align: center;
-    border-radius: 1.5rem;
-    box-shadow: 0 1.5rem 4rem rgba($black, .15);
-    transition: transform .2s;
-    height: 33rem;
+  background-color: rgba($white, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: $default-border-radius;
+  box-shadow: 0 1.5rem 4rem rgba($black, 0.15);
+  transition: transform 0.2s;
+  height: 33rem;
 
-    &:hover {
-        transform: translateY(-1.5rem) scale(1.03);
-    }
+  &:hover {
+    transform: translateY(-1.5rem) scale(1.03);
+  }
 }
 
 .icon {
-    font-size: 6rem;
-    @include text-gradient();
+  font-size: 6rem;
+  @include text-gradient($orange-main, $orange-secondary);
 }

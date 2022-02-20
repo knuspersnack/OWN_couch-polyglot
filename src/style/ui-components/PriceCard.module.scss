@@ -5,32 +5,64 @@
 .priceCard {
   perspective: 150rem;
   -moz-perspective: 150rem;
+  position: relative;
+  height: 50rem;
 
   &:hover {
+    transform-style: flat;
     .side.front {
-        transform: rotateY(180deg);
-      }
+      transform: rotateY(-180deg);
+      -moz-transform: rotateY(-180deg);
+    }
 
     .side.back {
       transform: rotateY(0deg);
+      -moz-transform: rotateY(0);
     }
   }
 }
 
-
 .side {
-  background-color: orangered;
   color: $white;
+  text-transform: uppercase;
   font-size: 2rem;
+
   height: 50rem;
-  transition: all 0.8s;
+  transition: all .8s ;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backface-visibility: hidden; //Hides the back-part of an element
+  border-radius: $default-border-radius;
+  //! -> not working in firefox
+  //box-shadow: 0 1.5rem 4rem rgba($black, 0.15);
 }
 
 .front {
-  background-color: orangered;
+  background-color: $grey-main;
+
+
+  &1 {
+    //! -> not working in firefox  
+    //@include bg-gradient($blue-main, $blue-secondary);
+    background-color: $blue-main;
+  }
+
+  &2 {
+    @include bg-gradient($green-main, $green-secondary);
+  }
+
+  &3 {
+    @include bg-gradient($green-main, $green-secondary);
+  }
 }
 
 .back {
-  background-color: green;
+  background-color: $green-main;
   transform: rotateY(180deg); //It is already rotated, since at the back
+
+  &1 {
+    @include bg-gradient($orange-main, $orange-secondary);
+  }
 }

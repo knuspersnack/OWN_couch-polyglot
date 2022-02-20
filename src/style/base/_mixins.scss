@@ -1,19 +1,27 @@
-@mixin bg-gradient($imageUrl) {
+@mixin gradient ($color1, $color2, $imageUrl:"") {
   background-image: linear-gradient(
       to right bottom,
-      rgba($amber-orange, 0.8),
-      rgba($burnt-orange, 0.8)
+      rgba($color1, 0.8),
+      rgba($color2, 0.8)
+    );
+}
+
+@mixin bg-gradient($color1, $color2) {
+  @include gradient($color1, $color2)
+}
+
+@mixin image-gradient($color1, $color2, $imageUrl) {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color1, 0.8),
+      rgba($color2, 0.8)
     ),
     url($imageUrl);
 }
 
-@mixin text-gradient() {
+@mixin text-gradient($color1, $color2) {
+  @include gradient($color1, $color2);
   display: inline-block;
-  background-image: linear-gradient(
-    to right,
-    rgba($carrot-orange, 0.8),
-    rgba($burnt-orange, 0.8)
-  );
   background-clip: text;
   color: transparent;
 }

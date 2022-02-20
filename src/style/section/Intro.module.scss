@@ -2,7 +2,11 @@
 @import '../base/variables';
 
 .sectionIntro {
-  @include bg-gradient('../../assets/natours/hero.jpg');
+  @include image-gradient(
+    $orange-main,
+    $orange-secondary,
+    '../../assets/natours/hero.jpg'
+  );
   height: 95vh;
   background-size: cover;
   background-position: top;

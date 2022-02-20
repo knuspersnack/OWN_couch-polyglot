@@ -3,22 +3,21 @@
 @import '../base/animations';
 
 .home {
-  background-color: $amber-orange;
+  background-color: $orange-main;
 }
 
 .natours {
-  color: $grey-dark-1;
+  color: $grey-main;
 
-  [class^="About_sectionAbout"] {
+  [class^='About_sectionAbout'] {
     margin-top: -20rem;
   }
 
-  [class^="Feature_sectionFeatures"] {
+  [class^='Feature_sectionFeatures'] {
     margin-top: -10rem;
   }
 
-  [class^="Booking_sectionBooking"] {
+  [class^='Booking_sectionBooking'] {
     margin-top: -10rem;
   }
-
 }

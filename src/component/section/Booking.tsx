@@ -13,7 +13,7 @@ const BookingSection = (props: Props) => {
           <SecondaryHeading text="Most popular lessons"/>
           <div className={'row'}>
             <div className={'col33'}>
-                <PriceCard />
+                <PriceCard color='blue'/>
                 </div>
             <div className={'col33'}>Col 1 of 3</div>
             <div className={'col33'}>Col 1 of 3</div>

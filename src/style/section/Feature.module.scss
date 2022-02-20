@@ -3,11 +3,14 @@
 
 .sectionFeatures {
   padding: 20rem 0;
-  @include bg-gradient('../../assets/natours/nat-4.jpg');
+  @include image-gradient(
+    $orange-main,
+    $orange-secondary,
+    '../../assets/natours/nat-4.jpg'
+  );
   background-image: cover;
 
   transform: skewY(-7deg);
-
 
   //only direct childs (row in this case)
   & > * {
