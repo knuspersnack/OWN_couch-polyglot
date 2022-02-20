@@ -2,11 +2,14 @@
 @import '../base/mixins';
 @import '../base/animations';
 
+
+$cardHeight: 52rem; 
+
 .priceCard {
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 50rem;
+  height: $cardHeight;
 
   &:hover {
     transform-style: flat;
@@ -23,46 +26,89 @@
 }
 
 .side {
-  color: $white;
-  text-transform: uppercase;
   font-size: 2rem;
+  outline-offset: 1rem;
+  outline: 3px solid $grey-secondary;
 
-  height: 50rem;
-  transition: all .8s ;
+  height: $cardHeight;
+  transition: all 0.8s;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   backface-visibility: hidden; //Hides the back-part of an element
   border-radius: $default-border-radius;
+  overflow: hidden;
+
   //! -> not working in firefox
   //box-shadow: 0 1.5rem 4rem rgba($black, 0.15);
-}
 
-.front {
-  background-color: $grey-main;
+  &.front {
+    background-color: $white;
+  }
 
+  &.back {
+    transform: rotateY(180deg); //It is already rotated, since at the back
+  }
 
-  &1 {
-    //! -> not working in firefox  
+  &.blue {
+    //! -> not working in firefox
     //@include bg-gradient($blue-main, $blue-secondary);
     background-color: $blue-main;
   }
 
-  &2 {
-    @include bg-gradient($green-main, $green-secondary);
+  &.green {
+    //! -> not working in firefox
+    //@include bg-gradient($green-main, $green-secondary);
+    background-color: $green-main;
   }
 
-  &3 {
-    @include bg-gradient($green-main, $green-secondary);
+  &.orange {
+    //! -> not working in firefox
+    //@include bg-gradient($orange-main, $orange-secondary);
+    background-color: $orange-tertiary;
   }
 }
 
-.back {
-  background-color: $green-main;
-  transform: rotateY(180deg); //It is already rotated, since at the back
+.picture {
+  background-size: cover;
+  height: 23rem;
+  background-blend-mode: screen;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
 
-  &1 {
-    @include bg-gradient($orange-main, $orange-secondary);
-  }
+.pic1 {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($orange-main, 0.8),
+      rgba($orange-secondary, 0.8)
+    ),
+    url(../../assets/natours/nat-5.jpg);
+}
+.pic2 {
+  background-image: url(../../assets/natours/nat-5.jpg);
+}
+.pic3 {
+  background-image: url(../../assets/natours/nat-5.jpg);
+}
+
+.details {
+    padding: 3rem;
+
+    ul {
+        list-style:none;
+        width: 80%;
+        margin: 0 auto;
+
+        li {
+            text-align: center;
+            font-size: 1.5rem;
+            padding: 1rem;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid $grey-secondary;
+            }
+        }
+    }
 }

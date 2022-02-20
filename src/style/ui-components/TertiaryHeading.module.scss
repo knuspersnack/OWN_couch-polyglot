@@ -1,0 +1,32 @@
+@import '../base/variables';
+@import '../base/mixins';
+
+.headingTertiary {
+  font-size: 2.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: right;
+  color: $white;
+
+  position: absolute;
+  top: 12rem;
+  right: 2rem;
+  width: 75%;
+}
+
+.text {
+  padding: 1rem 1.5rem;
+  box-decoration-break: clone; //each line of the text is handled as own element
+
+  &.orange {
+    @include bg-gradient($orange-main, $orange-secondary);
+  }
+
+  &.blue {
+    @include bg-gradient($blue-main, $blue-secondary);
+  }
+
+  &.green {
+    @include bg-gradient($green-main, $green-secondary);
+  }
+}
