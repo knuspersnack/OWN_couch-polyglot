@@ -1,15 +1,36 @@
 import classNames from 'classnames';
-import React, { MouseEventHandler } from 'react';
+import React, { FC, MouseEventHandler } from 'react';
 import style from '../../style/ui-components/PrimaryButton.module.scss';
 var cx = classNames.bind(style);
 
-type Props = { label: String; onClick: MouseEventHandler; color?: String };
+export enum ButtonColor {
+  WHITE,
+  GREEN,
+  ORANGE
+}
 
-const PrimaryButton = (props: Props) => {
-  const { label, onClick } = { ...props };
-  return <a href="#" className={cx(style.btn, style.btnWhite)} onClick={onClick}>
-      {label}
-      </a>;
+type Props = { 
+  onClick: MouseEventHandler; 
+  title: string;
+  buttonColor?: ButtonColor;
+}
+
+const PrimaryButton:FC<Props> = (props: Props, children) => {
+  const { title, onClick, buttonColor } = { ...props };
+  let color = 'white';
+
+  if(buttonColor === ButtonColor.GREEN) {
+    color = 'green';
+  }
+  if(buttonColor === ButtonColor.ORANGE) {
+    color = 'orange';
+  }
+
+  return (
+    <a href='#' className={cx(style.btn, style[color])} onClick={onClick}>
+      {title}
+    </a>
+  );
 };
 
 export default PrimaryButton;

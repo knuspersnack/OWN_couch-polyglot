@@ -19,7 +19,7 @@ const IntroSection = (props: Props) => {
           <span className={style.headingPrimaryMain}>COUCH POLYGLOT</span>
           <span className={style.headingPrimarySub}>is where life happens</span>
         </h1>
-        <PrimaryButton label={'Discover my content'} onClick={props.onClick} />
+        <PrimaryButton title={'Discover my content'} onClick={props.onClick} />
       </div>
     </section>
   );

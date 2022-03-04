@@ -2,8 +2,7 @@
 @import '../base/mixins';
 @import '../base/animations';
 
-
-$cardHeight: 52rem; 
+$cardHeight: 52rem;
 
 .priceCard {
   perspective: 150rem;
@@ -45,70 +44,84 @@ $cardHeight: 52rem;
 
   &.front {
     background-color: $white;
-  }
 
-  &.back {
-    transform: rotateY(180deg); //It is already rotated, since at the back
-  }
+    .picture {
+      background-size: cover;
+      height: 23rem;
+      background-blend-mode: screen;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    }
 
-  &.blue {
-    //! -> not working in firefox
-    //@include bg-gradient($blue-main, $blue-secondary);
-    background-color: $blue-main;
-  }
+    .details {
+      padding: 3rem;
 
-  &.green {
-    //! -> not working in firefox
-    //@include bg-gradient($green-main, $green-secondary);
-    background-color: $green-main;
-  }
-
-  &.orange {
-    //! -> not working in firefox
-    //@include bg-gradient($orange-main, $orange-secondary);
-    background-color: $orange-tertiary;
-  }
-}
-
-.picture {
-  background-size: cover;
-  height: 23rem;
-  background-blend-mode: screen;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-}
-
-.pic1 {
-  background-image: linear-gradient(
-      to right bottom,
-      rgba($orange-main, 0.8),
-      rgba($orange-secondary, 0.8)
-    ),
-    url(../../assets/natours/nat-5.jpg);
-}
-.pic2 {
-  background-image: url(../../assets/natours/nat-5.jpg);
-}
-.pic3 {
-  background-image: url(../../assets/natours/nat-5.jpg);
-}
-
-.details {
-    padding: 3rem;
-
-    ul {
-        list-style:none;
+      ul {
+        list-style: none;
         width: 80%;
         margin: 0 auto;
 
         li {
-            text-align: center;
-            font-size: 1.5rem;
-            padding: 1rem;
+          text-align: center;
+          font-size: 1.5rem;
+          padding: 1rem;
 
-            &:not(:last-child) {
-                border-bottom: 1px solid $grey-secondary;
-            }
+          &:not(:last-child) {
+            border-bottom: 1px solid $grey-secondary;
+          }
         }
+      }
     }
+  }
+
+  &.back {
+    transform: rotateY(180deg); //It is already rotated, since at the back
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .pricebox {
+      text-align: center;
+      color: $white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .description {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+    }
+
+    .value {
+      font-size: 6rem;
+      font-weight: 100;
+      margin-bottom: 4rem;
+    }
+  }
+
+  &.blue {
+    @include bg-gradient($blue-main, $blue-secondary);
+  }
+
+  &.green {
+    @include bg-gradient($green-main, $green-secondary);
+  }
+
+  &.orange {
+    @include bg-gradient($orange-main, $orange-secondary);
+  }
+}
+
+.pic1 {
+   @include image-gradient($orange-main, $orange-secondary, '../../assets/natours/nat-5.jpg');
+}
+.pic2 {
+  @include image-gradient($green-main, $green-secondary, '../../assets/natours/nat-6.jpg');
+}
+.pic3 {
+  @include image-gradient($blue-main, $blue-secondary, '../../assets/natours/nat-7.jpg');
 }
