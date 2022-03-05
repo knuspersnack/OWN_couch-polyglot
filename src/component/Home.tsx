@@ -4,6 +4,7 @@ import AboutSection from './section/About';
 import BookingSection from './section/Booking';
 import FeatureSection from './section/Feature';
 import IntroSection from './section/Intro';
+import Stories from './section/Stories';
 import SecondaryHeading from './UI/SecondaryHeading';
 
 
@@ -27,6 +28,9 @@ const Home = () => {
         <FeatureSection />
 
         <BookingSection />
+
+        <Stories />
+        
       </div>
     </>
   );

@@ -1,11 +1,10 @@
-import React from 'react';
 import classNames from 'classnames';
-import SecondaryHeading from '../UI/SecondaryHeading';
+import React from 'react';
 import style from '../../style/section/Booking.module.scss';
-import PriceCard from '../UI/PriceCard';
 import { Color } from '../../types/ColorSchema';
-import TertiaryHeading from '../UI/TertiaryHeading';
+import PriceCard from '../UI/PriceCard';
 import PrimaryButton, { ButtonColor } from '../UI/PrimaryButton';
+import SecondaryHeading from '../UI/SecondaryHeading';
 var cx = classNames.bind(style);
 
 type Props = {};

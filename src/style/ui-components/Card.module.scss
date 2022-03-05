@@ -1,0 +1,16 @@
+@import '../base/variables';
+@import '../base/mixins';
+
+.card {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba($black, 0.1);
+  background-color: $white;
+  border-radius: $default-border-radius;
+  padding: 6rem;
+  padding-left: 9rem;
+  font-size: $default-font-size;
+  &.opac {
+    background-color: rgba($white, 0.6);
+  }
+}
