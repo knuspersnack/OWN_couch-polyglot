@@ -2,10 +2,10 @@ import React from 'react';
 import style from '../style/pages/Home.module.scss';
 import AboutSection from './section/About';
 import BookingSection from './section/Booking';
+import ContactSection from './section/Contact';
 import FeatureSection from './section/Feature';
 import IntroSection from './section/Intro';
 import Stories from './section/Stories';
-import SecondaryHeading from './UI/SecondaryHeading';
 
 
 const Home = () => {
@@ -30,6 +30,8 @@ const Home = () => {
         <BookingSection />
 
         <Stories />
+
+        <ContactSection />
         
       </div>
     </>
