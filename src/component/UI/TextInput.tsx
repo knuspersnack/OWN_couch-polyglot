@@ -7,10 +7,11 @@ type Props = {
   id: string;
   type: string;
   onInput?: Function;
+  isRequired?: boolean;
 };
 
 const TextInput = (props: Props) => {
-  const { placeholder, label, id, onInput, type } = props;
+  const { placeholder, label, id, onInput, type, isRequired = true } = props;
 
   const onChange = () => {
     if (onInput) {
@@ -19,17 +20,17 @@ const TextInput = (props: Props) => {
   };
 
   return (
-    <>
+    <div className={style.container}>
       <input
         id={id}
         type={type}
         className={style.textInput}
         placeholder={placeholder}
         onInput={onChange}
-        required
+        required={isRequired}
       />
-      <label htmlFor={id}>{label}</label>
-    </>
+      <label className={style.label} htmlFor={id}>{label}</label>
+    </div>
   );
 };
 
