@@ -25,3 +25,7 @@
   background-clip: text;
   color: transparent;
 }
+
+@mixin box-shadow($color) {
+  box-shadow: 0 1.5rem 4rem rgba($color, 0.15);
+}

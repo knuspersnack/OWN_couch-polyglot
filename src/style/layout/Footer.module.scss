@@ -1,0 +1,44 @@
+@import '../base/variables';
+
+.footerContainer {
+  margin-top: 10px;
+  background-color: $black;
+  padding: 5rem 0;
+  font-size: 1.4rem;
+}
+
+.logoContainer {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  width: 15rem;
+  height: auto;
+}
+
+.navigation {
+  text-align: center;
+  border-top: 1px solid $grey-tertiary;
+  padding-top: 2rem;
+
+  .list {
+    list-style: none;
+  }
+
+  .item{
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+}
+
+.copyRight {
+  text-align: center;
+  font-style: italic;
+  border-top: 1px solid $grey-tertiary;
+  padding-top: 2rem;
+  color: $white;
+}
