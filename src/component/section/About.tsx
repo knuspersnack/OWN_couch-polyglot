@@ -16,10 +16,10 @@ const AboutSection = (props: Props) => {
       <div className='grid-container'>
         <div className={'row'}>
           <div className={'col50'}>
-            <h3 className='heading-tertiary u-margin-bottom-small'>
+            <h3 className='text-sky-400 text-6xl'>
               You're going to fall in love with languages
             </h3>
-            <p className='paragraph'>
+            <p className=''>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
               reprehenderit obcaecati repellendus quo quas excepturi hic facere
               praesentium asperiores exercitationem debitis totam, provident
