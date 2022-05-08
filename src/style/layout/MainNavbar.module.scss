@@ -1,5 +1,10 @@
 @import '../base/variables';
 
+.nav-link{
+  font-family: 'Roboto', sans-serif;
+  color: #2699FB !important;
+}
+
 .navigationContainer {
   width: 100%;
   background-color: $black;
@@ -20,10 +25,10 @@
   padding: 10px 20px;
   display: inline-block;
   border-radius: 5px;
-  color: $white;
+  color: $white !important;
 
   &:hover {
     background-color: $white;
-    color: $grey-main;
+    color: $grey-main !important;
   }
 }
