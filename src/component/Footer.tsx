@@ -2,13 +2,15 @@ import React from 'react';
 import style from '../style/layout/Footer.module.scss';
 import fullLogo from '../assets/natours/logo-green-2x.png';
 import TertiaryButton from './UI/TertiaryButton';
+import classNames from 'classnames';
+var cx = classNames.bind(style);
 
 type Props = {};
 
 const Footer = (props: Props) => {
   return (
-    <footer className={style.footerContainer}>
-      <div className={style.logoContainer}>
+    <footer className={cx(style.footerContainer)}>
+      <div className={cx(style.logoContainer, "grid justify-items-center")}>
         <img src={fullLogo} alt='Person on a tour' className={style.logo} />
       </div>
       <section className={'grid-container'}>

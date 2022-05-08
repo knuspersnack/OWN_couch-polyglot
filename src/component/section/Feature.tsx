@@ -7,9 +7,8 @@ type Props = {}
 const FeatureSection = (props: Props) => {
   return (
     <section className={style.sectionFeatures}>
-          <div className={'grid-container'}>
-            <div className={'row'}>
-              <div className={'col25'}>
+          <div className={'grid grid-cols-4 gap-12 px-12 h-full'}>
+              <div>
                 <FeatureBox
                   heading={'Explore the world'}
                   text={
@@ -18,7 +17,7 @@ const FeatureSection = (props: Props) => {
                   iconClass={'icon-basic-world'}
                 />
               </div>
-              <div className={'col25'}>
+              <div>
                 <FeatureBox
                   heading={'Meet nature'}
                   text={
@@ -27,7 +26,7 @@ const FeatureSection = (props: Props) => {
                   iconClass={'icon-basic-compass'}
                 />
               </div>
-              <div className={'col25'}>
+              <div>
                 <FeatureBox
                   heading={'Find your way'}
                   text={
@@ -36,7 +35,7 @@ const FeatureSection = (props: Props) => {
                   iconClass={'icon-basic-map'}
                 />
               </div>
-              <div className={'col25'}>
+              <div>
                 <FeatureBox
                   heading={'Live a healthier life'}
                   text={
@@ -45,7 +44,6 @@ const FeatureSection = (props: Props) => {
                   iconClass={'icon-basic-heart'}
                 />
               </div>
-            </div>
           </div>
         </section>
   )
