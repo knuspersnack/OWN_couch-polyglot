@@ -5,6 +5,7 @@ import { Color } from '../../types/ColorSchema';
 import PriceCard from '../UI/PriceCard';
 import PrimaryButton, { ButtonColor } from '../UI/PrimaryButton';
 import SecondaryHeading from '../UI/SecondaryHeading';
+import { Container, Row, Col } from 'react-bootstrap';
 var cx = classNames.bind(style);
 
 type Props = {};
@@ -13,8 +14,9 @@ const BookingSection = (props: Props) => {
   return (
     <section className={cx(style.sectionBooking, 'grid-container')}>
       <SecondaryHeading text='Most popular lessons' />
-      <div className={'row'}>
-        <div className={'col33'}>
+      <Container>
+      <Row>
+        <Col>
           <PriceCard
             colorFront={Color.ORANGE}
             colorBack={Color.ORANGE}
@@ -31,8 +33,8 @@ const BookingSection = (props: Props) => {
               <li>Difficulty: Easy</li>
             </ul>
           </PriceCard>
-        </div>
-        <div className={'col33'}>
+        </Col>
+        <Col>
           <PriceCard
             colorFront={Color.GREEN}
             colorBack={Color.GREEN}
@@ -49,8 +51,8 @@ const BookingSection = (props: Props) => {
               <li>Difficulty: Medium</li>
             </ul>
           </PriceCard>
-        </div>
-        <div className={'col33'}>
+        </Col>
+        <Col>
         <PriceCard
             colorFront={Color.BLUE}
             colorBack={Color.BLUE}
@@ -66,9 +68,11 @@ const BookingSection = (props: Props) => {
               <li>Intensity: Hard</li>
             </ul>
           </PriceCard>
-        </div>
-      </div>
+        </Col>
+      </Row>
+      </Container>
       <PrimaryButton title={'Discover all my lessons'} onClick={()=>{}} buttonColor={ButtonColor.ORANGE}/>
+  
     </section>
   );
 };

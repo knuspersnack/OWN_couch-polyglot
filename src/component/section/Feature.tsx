@@ -1,15 +1,16 @@
 import React from 'react'
 import FeatureBox from '../UI/FeatureBox'
 import style from '../../style/section/Feature.module.scss';
+import { Container, Row, Col } from 'react-bootstrap';
 
 type Props = {}
 
 const FeatureSection = (props: Props) => {
   return (
     <section className={style.sectionFeatures}>
-          <div className={'grid-container'}>
-            <div className={'row'}>
-              <div className={'col25'}>
+          <Container>
+            <Row>
+              <Col>
                 <FeatureBox
                   heading={'Explore the world'}
                   text={
@@ -17,8 +18,8 @@ const FeatureSection = (props: Props) => {
                   }
                   iconClass={'icon-basic-world'}
                 />
-              </div>
-              <div className={'col25'}>
+              </Col>
+              <Col>
                 <FeatureBox
                   heading={'Meet nature'}
                   text={
@@ -26,8 +27,8 @@ const FeatureSection = (props: Props) => {
                   }
                   iconClass={'icon-basic-compass'}
                 />
-              </div>
-              <div className={'col25'}>
+              </Col>
+              <Col>
                 <FeatureBox
                   heading={'Find your way'}
                   text={
@@ -35,8 +36,8 @@ const FeatureSection = (props: Props) => {
                   }
                   iconClass={'icon-basic-map'}
                 />
-              </div>
-              <div className={'col25'}>
+              </Col>
+              <Col>
                 <FeatureBox
                   heading={'Live a healthier life'}
                   text={
@@ -44,9 +45,9 @@ const FeatureSection = (props: Props) => {
                   }
                   iconClass={'icon-basic-heart'}
                 />
-              </div>
-            </div>
-          </div>
+              </Col>
+            </Row>
+          </Container>
         </section>
   )
 }

@@ -3,6 +3,7 @@ import style from '../../style/section/About.module.scss';
 import ImageComposition from '../ImageComposition';
 import SecondaryButton from '../UI/SecondaryButton';
 import SecondaryHeading from '../UI/SecondaryHeading';
+import { Container, Row, Col } from 'react-bootstrap';
 
 type Props = {};
 
@@ -13,9 +14,9 @@ const AboutSection = (props: Props) => {
         text='Exciting courses for adventurous people'
         cssClasses={'u-center-text u-margin-bottom-large'}
       />
-      <div className='grid-container'>
-        <div className={'row'}>
-          <div className={'col50'}>
+      <Container fluid="md">
+        <Row>
+          <Col>
             <h3 className='heading-tertiary u-margin-bottom-small'>
               You're going to fall in love with languages
             </h3>
@@ -33,12 +34,12 @@ const AboutSection = (props: Props) => {
               praesentium labore ipsam atque vero.
             </p>
             <SecondaryButton label={'Learn more >>'} onClick={() => {}} />
-          </div>
-          <div className={'col50'}>
+          </Col>
+          <Col>
             <ImageComposition />
-          </div>
-        </div>
-      </div>
+          </Col>
+        </Row>
+      </Container>
     </section>
   );
 };

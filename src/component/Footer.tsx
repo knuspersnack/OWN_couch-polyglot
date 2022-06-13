@@ -2,6 +2,7 @@ import React from 'react';
 import style from '../style/layout/Footer.module.scss';
 import fullLogo from '../assets/natours/logo-green-2x.png';
 import TertiaryButton from './UI/TertiaryButton';
+import { Container, Row, Col } from 'react-bootstrap';
 
 type Props = {};
 
@@ -11,9 +12,9 @@ const Footer = (props: Props) => {
       <div className={style.logoContainer}>
         <img src={fullLogo} alt='Person on a tour' className={style.logo} />
       </div>
-      <section className={'grid-container'}>
-        <div className={'row'}>
-          <div className={'col50'}>
+      <Container>
+        <Row>
+          <Col>
             <div className={style.navigation}>
               <ul className={style.list}>
                 <li className={style.item}>
@@ -30,15 +31,15 @@ const Footer = (props: Props) => {
                 </li>
               </ul>
             </div>
-          </div>
-          <div className={'col50'}>
+          </Col>
+          <Col>
             <p className={style.copyRight}>
               Built by <TertiaryButton label='GD' onClick={() => {}} /> for
               Couch Polyglot. Copyright by &copy; GD.
             </p>
-          </div>
-        </div>
-      </section>
+          </Col>
+        </Row>
+      </Container>
     </footer>
   );
 };
