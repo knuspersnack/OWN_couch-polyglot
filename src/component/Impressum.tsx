@@ -4,7 +4,17 @@ const Impressum = () => {
   return (
     <div className="impressum">
       <h1>Impressum</h1>
-      <p>Work in progess...</p>
+      <div>
+        <p>Laura Homs Vila</p>
+        <p>c/o Impressumservice Dein-Impressum</p>
+        <p>Stettiner Straße 41</p>
+        <p>35410 Hungen</p>
+        <p>Deutschland</p>
+      </div>
+      <div>
+        © copyright by Laura Homs Vila 2024  
+      </div>
+
     </div>
   );
 };
