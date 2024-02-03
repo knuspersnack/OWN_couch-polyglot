@@ -9,7 +9,8 @@ const Impressum = () => {
         <p>c/o Impressumservice Dein-Impressum</p>
         <p>Stettiner Straße 41</p>
         <p>35410 Hungen</p>
-        <p>Deutschland</p>
+        <p>D - Deutschland</p>
+        <p>couchpolyglot@gmail.com</p>
       </div>
       <div>
         © copyright by Laura Homs Vila 2024  
